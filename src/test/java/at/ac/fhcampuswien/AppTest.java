@@ -58,7 +58,7 @@ class PasswordTest {
 
     @Test
     public void HasSpecialCharacter_rdytogo() {
-        Password password = new Password("hust!");
+        Password password = new Password("husthust!");
         assertTrue(password.checkHasSpecialChar());
     }
 
@@ -70,7 +70,7 @@ class PasswordTest {
 
     @Test
     public void HasSpecialCharacter_otherSpechialChar() {
-        Password password = new Password("OtherSpecialChaButNotTheRight0ne~~");
+        Password password = new Password("OtherSpecialCharButNotTheRight0ne~~");
         assertFalse(password.checkHasSpecialChar());
     }
 
@@ -103,7 +103,7 @@ class PasswordTest {
         Password password = new Password("password0815");
         assertTrue(password.checkContNumbers());
     }
-    
+
     @Test
     public void checkContNumbers_false() {
         Password password = new Password("password123");

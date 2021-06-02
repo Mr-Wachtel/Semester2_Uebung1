@@ -22,7 +22,7 @@ public class Password {
 
 
     boolean checkPassword() {
-        if (PWLaenge() && checkUpperLower() && checkHasNumber() && checkHasSpecialChar()) {
+        if (PWLaenge() && checkUpperLower() && checkHasNumber() && checkHasSpecialChar() && checkContNumbers() && checkSameNumber()) {
             return true;
         } else {
             return false;
@@ -86,7 +86,6 @@ public class Password {
             for (int i = 0; i < this.getPassword().length()-3; i++){
                 if (Character.isDigit(this.getPassword().charAt(i))&& Character.isDigit(this.getPassword().charAt(i+1)) && Character.isDigit(this.getPassword().charAt(i+2))&& Character.isDigit(this.getPassword().charAt(i+3)))
                 {
-
                     if (((this.getPassword().charAt(i))+(this.getPassword().charAt(i+1))+(this.getPassword().charAt(i+2))+(this.getPassword().charAt(i+3)))/4 == (this.getPassword().charAt(i))) {
                         return false;
                     }
