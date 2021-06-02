@@ -103,8 +103,7 @@ class PasswordTest {
         Password password = new Password("password0815");
         assertTrue(password.checkContNumbers());
     }
-
-    //cont numbers at the end
+    
     @Test
     public void checkContNumbers_false() {
         Password password = new Password("password123");
