@@ -87,5 +87,28 @@ class PasswordTest {
         assertFalse(password.checkPassword());
     }
 
+    @Test
+    public void CheckSameNumber_rdytogo() {
+        Password password = new Password("password90");
+        assertTrue(password.checkSameNumber());
+    }
+
+    @Test
+    public void checkSameNumber_false() {
+        Password password = new Password("password0000");
+        assertFalse(password.checkSameNumber());
+    }
+    @Test
+    public void checkContNumbers_rdytogo() {
+        Password password = new Password("password0815");
+        assertTrue(password.checkContNumbers());
+    }
+
+    //cont numbers at the end
+    @Test
+    public void checkContNumbers_false() {
+        Password password = new Password("password123");
+        assertFalse(password.checkContNumbers());
+    }
 
 }
